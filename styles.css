@@ -1,0 +1,407 @@
+/* Estilos generales */
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Cambia el color de fondo del encabezado */
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Cambia el tipo de letra */
+    color: #fff; /* Cambia el color del texto */
+    margin-bottom: 20px;
+}
+
+.galeria{
+    color: #333;
+}
+
+
+h2{
+    color: white;
+}
+
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #f9f9f9; /* Cambia el color del enlace */
+    text-decoration: none;
+    font-family: 'Arial', sans-serif; /* Cambia el tipo de letra */
+    transition: color 0.3s; /* Agrega una transición al color del texto */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Cambia el color del texto al pasar el mouse */
+}
+
+
+section {
+    padding: 60px 20px;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 500px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    nav ul li {
+        margin-right: 10px;
+    }
+    
+    section {
+        padding: 30px 10px;
+    }
+    
+    .servicio {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    
+    .instructor {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    
+    .ubicacion-info,
+    .ubicacion-video {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .ubicacion-info h2 {
+        font-size: 24px;
+    }
+    
+    .ubicacion-info p {
+        font-size: 16px;
+    }
+    
+    .ubicacion-video video {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .contacto-info p {
+        font-size: 16px;
+    }
+    
+    .contacto-form input,
+    .contacto-form textarea {
+        font-size: 16px;
+    }
+}
+
+
+
+
+/* Estilos para el héroe */
+/* Estilos para la sección hero */
+#hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    height: 100vh; /* Establece la altura al 100% del viewport */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Cubre el contenedor con el video */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 20px;
+}
+
+
+/* Estilos para los servicios */
+.servicio:hover .info {
+    transform: scale(1.1); /* Hace que el texto se haga un 10% más grande */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.servicio .info {
+    transition: transform 0.3s ease; /* Asegura que la transición se aplique también al retirar el mouse */
+}
+
+
+
+
+
+#servicios {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333;; /* Rojo */
+}
+
+.servicios-container {
+    display: flex;
+    justify-content: center; /* Centra los servicios horizontalmente */
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    flex: 0 0 calc(30.22% - 40px); /* Ajusta el tamaño de cada servicio */
+    max-width: calc(30.22% - 40px); /* Establece el ancho máximo */
+    padding: 20px;
+    margin: 20px 10px; /* Ajusta el margen horizontal */
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0px 0px 20px rgba(230, 230, 230, 0.979);
+    transition: transform 0.3s ease;
+}
+
+
+.servicio:hover {
+    transform: translateY(-10px);
+}
+
+.servicio img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilos para la sección de galería */
+#galeria {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.galeria-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    background-image: url(./contacto.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.contacto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-info {
+    margin-bottom: 20px;
+}
+
+.contacto-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contacto-info p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+.contacto-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+}
+
+.contacto-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto-form button:hover {
+    background-color: #ff9900;
+}
+
+
+
+
+#instructores {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333; /* Azul */
+}
+
+.instructores-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.instructor {
+    flex: 0 0 250px; /* Establece un ancho fijo para los contenedores */
+    height: 400px; /* Establece una altura fija para los contenedores */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, white, #cac8c6);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+    
+
+.instructor:hover {
+    transform: translateY(-10px);
+}
+
+.instructor img {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+
+
+#ubicacion {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+
+
+#servicios h2,
+#instructores h2 {
+    transition: transform 0.3s ease; /* Transición de 0.3 segundos con un efecto de desvanecimiento */
+}
+
+#servicios:hover h2,
+#instructores:hover h2 {
+    transform: translateY(5px); /* Desplaza el texto hacia abajo 5px al pasar el cursor sobre el elemento */
+}
+
+#servicios:not(:hover) h2,
+#instructores:not(:hover) h2 {
+    transform: translateY(-5px); /* Desplaza el texto hacia arriba 5px cuando no se está pasando el cursor sobre el elemento */
+}
+
+
+.ubicacion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ubicacion-info {
+    flex: 1;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif; /* Cambia la fuente a Roboto */
+    color: #333; /* Cambia el color del texto */
+    text-align: center; /* Centra el texto */
+}
+
+.ubicacion-info h2 {
+    font-size: 2.5em; /* Tamaño de fuente más grande */
+    margin-bottom: 20px; /* Espacio inferior adicional */
+}
+
+.ubicacion-info p {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+}
+
+.ubicacion-video {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.ubicacion-video video {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ubicacion-video video:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #000; /* Negro */
+    color: #fff; /* Blanco */
+    text-align: center;
+    padding: 20px;
+}
